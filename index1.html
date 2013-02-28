@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+
+<!-- Link to Popcorn -->
+
+<script src="js/popcorn-complete.js"></script>
+
+<!-- The Style -->
+
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Pop the Corn -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var pop = Popcorn.vimeo('#video',
+                              'http://player.vimeo.com/video/25107077' );
+
+	pop.play();
+
+}, false);
+
+</script>
+</head>
+
+<!-- The Body -->
+
+<body>	
+
+<!-- The Container -->
+
+	<div id="container">
+	
+	
+<!--The Video-->		
+
+		<video id="video" controls>
+		</video>
+
+<!--The Content Box-->
+
+		<div id="box">
+		
+		</div>
+
+<!-- End Container -->
+
+	</div>	
+
+<!-- End Body -->
+
+</body>
+</html>
