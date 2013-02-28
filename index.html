@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+
+<!-- Link to Popcorn -->
+
+<script src="js/popcorn-complete.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+
+<!-- The Style -->
+
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Pop the Corn -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var pop = Popcorn("#video");
+    	pop.play();
+
+	pop.footnote({
+		start:'1', // Our start time in seconds
+		end:'6', // Our end time in seconds
+		text:"Hello world!", // The text we want to display
+		target:'box', // What DOM element we want to target on the page
+	});
+  
+
+	
+	pop.image({
+		start:'24', // Our start time in seconds
+		end:'28', // Our end time in seconds
+		src: "img/square.jpg",
+		target:'box', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		/* applyclass: "flip, black, move_down", // Specify which CSS class */
+	});
+	
+	
+	pop.image({
+		start:'13', // Our start time in seconds
+		end:'15', // Our end time in seconds
+		src: "img/square1.jpg",
+		target:'box1', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		/* applyclass: "flip, black, move_down", // Specify which CSS class */
+	});
+	
+	pop.image({
+		start:'54', // Our start time in seconds
+		end:'56', // Our end time in seconds
+		src: "img/square2.jpg",
+		target:'box2', // What DOM element we want to target on the page
+		effect: "applyclass", // Apply a CSS class to the target container
+		/* applyclass: "flip, black, move_down", // Specify which CSS class */
+	});
+	
+    
+	pop.googlemap({
+		start: 13,
+		end: 19,
+		type: "ROADMAP",
+		target: "box1",
+		lat: 43.665429,
+		lng: -79.403323,
+		zoom: 5,
+	});
+
+	pop.webpage({
+		id: "webpages-a",
+		start: 19.1,
+		end: 25,
+		src: "http://itp.nyu.edu/itp/",
+		target: "container"
+	});
+    
+});
+</script>
+</head>
+
+<!-- The Body -->
+
+<body>	
+
+<!-- The Container -->
+	
+<!--The Video-->		
+
+		<video id="video" controls>
+  			<source src="video/big_buck_bunny.mp4">
+		</video>
+
+<!--The Content Box-->
+
+		<div id="box">
+		
+		</div>
+		
+		<div id="box1">
+		
+		</div>
+		
+		<div id="box2">
+		
+		</div>
+<!-- End Container -->
+
+	</div>
+	
+    <script type="text/javascript" src="./script.js"></script>
+
+<!-- End Body -->
+
+</body>
+</html>
